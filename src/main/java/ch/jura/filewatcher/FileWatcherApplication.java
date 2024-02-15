@@ -43,7 +43,7 @@ public class FileWatcherApplication implements CommandLineRunner {
         while ((key = watchService.take()) != null) {
 
             for (WatchEvent<?> event : key.pollEvents()) {
-
+                LOG.info("Watch event...: " + event.kind().toString() );
                 LOG.info("File found...: " + event.context().toString() );
 
                 Path destinationPath = Paths.get(destPath);
