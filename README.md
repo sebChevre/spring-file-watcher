@@ -11,3 +11,6 @@
 
 ### Docker
 > docker run -e WATCH_FOLDER=/my_folder/test sebchevre/file-watcher:1.1.0
+>
+
+docker run -e WATCH_FOLDER=/opt -e DEST_FOLDER=/opt/out -v /Users/seb/JAVA/test_folder:/opt -v /Users/seb/JAVA/dest_folder:/opt/out sebchevre/file-watcher:1.1.0 

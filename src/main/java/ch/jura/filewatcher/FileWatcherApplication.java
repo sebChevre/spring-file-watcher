@@ -70,7 +70,7 @@ public class FileWatcherApplication implements CommandLineRunner {
                 writer.close();
 
                 if (inputFile.delete()){
-                    LOG.info("Successfully deleted file from inout folder: " + inputFile.getAbsolutePath() );
+                    LOG.info("Successfully deleted file from input folder: " + inputFile.getAbsolutePath() );
                 }else {
                     LOG.info("Problem deleted file from inout folder: " + inputFile.getAbsolutePath() );
                 }
