@@ -38,7 +38,6 @@ public class FileWatcherApplication implements CommandLineRunner {
         Path path = Paths.get(folderPath);
         path.register(watchService,
                 StandardWatchEventKinds.ENTRY_CREATE,
-                StandardWatchEventKinds.ENTRY_DELETE,
                 StandardWatchEventKinds.ENTRY_MODIFY);
         WatchKey key;
         while ((key = watchService.take()) != null) {
